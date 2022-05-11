@@ -1,0 +1,16 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background-color:grey;
+  border-radius: 10px;  
+  width: 100%;
+  color:white
+  }
+  
+  .container-main{
+      padding-right :30%;
+  padding-left:30%
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
