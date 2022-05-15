@@ -1,16 +1,230 @@
+/* Card */
+body{
+  margin: 0!important;
+}
+h2{
+  padding: 0 10px 0 10px;
+  font:"Verdana", Times, serif;
+}
+h3{
+  text-align: center;
+}
+
+
+/* [1] */
+/* Cards */
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  background-color:grey;
-  border-radius: 10px;  
+  background-color:rgb(218, 218, 218);
+  padding-bottom:10px;
+  border-radius: 10px; 
   width: 100%;
-  color:white
-  }
+  color:rgb(0, 0, 0);
+  margin-bottom:10px;
+  padding-top:10px;
+}
   
   .container-main{
-      padding-right :30%;
-  padding-left:30%
+  padding-right :30%;
+  padding-left:30%;
   }
   
   .container {
     padding: 2px 16px;
   }
+
+  .delete-button{
+    padding: 6px ;
+    margin-left:3px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    background: #f44336;
+    font-size: 13px;
+    border: 10px;
+    color:white;
+    cursor: pointer;
+    display:inline;
+    float:right;
+    border-radius:3px
+  }
+
+
+
+  /* Navbar */
+  .topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+    margin-bottom: 40px;
+  }
+  
+   .search-container {
+        margin:18px;
+  }
+  .topnav button {
+    float: right;
+    padding: 6px ;
+    margin-left:3px;
+    margin-top: 8px;
+    margin-right: 6px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav input[type=text] {
+    margin-bottom:10px;
+    float:right;
+    padding: 6px;
+    margin-left: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width:40%;
+  }
+
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  #add-button{
+    background-color: #4CAF50;
+    color:white;
+    border-radius:2px
+  }
+
+
+/* Modals */
+  /* [2] */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    padding-bottom:50px;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+  }
+  
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  
+
+  #form{
+margin:0 auto;
+  }
+
+
+  #add-user-confirm{
+    padding: 10px ;
+    margin-left:3px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    background: #f44336;
+    color:white;
+    font-size: 17px;
+    border: 10px;
+    cursor: pointer;
+    display:inline;
+    border-radius:3px
+  }
+
+  #delete-no-button{
+    padding: 10px ;
+    margin-left:3px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    background: #f44336;
+    color:white;
+    font-size: 17px;
+    border: 10px;
+    cursor: pointer;
+    display:inline;
+    border-radius:3px
+  }
+  #delete-yes-button{
+    padding: 10px ;
+    margin-left:3px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    background: #2bb428;
+    color:white;
+    font-size: 17px;
+    border: 10px;
+    cursor: pointer;
+    display:inline;
+    border-radius:3px
+  }
+  #ok{
+    padding: 10px ;
+    margin-left:3px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+    background: #000000;
+    color:white;
+    font-size: 17px;
+    border: 10px;
+    cursor: pointer;
+    display:inline;
+    border-radius:3px
+  }
+
+/* Add record modal */
+#form input[type=text] {
+  margin-bottom:10px;
+  margin:0 auto;
+  align-items:center;
+  padding: 6px;
+  margin-left: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: 1px solid black;
+  border-radius:1px;
+  width:70%;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  text-align: center;
+}
+
+#addRecordModal{
+  padding-left:20%;
+  padding-right:20%;
+  width:60%;
+  display:none;
+  text-align:center;
+  top:-10px
+}
+
+
+/* Citations */
+  /*[1] https://stackoverflow.com/questions/53761059/display-json-data-in-bootstrap-card-using-jquery */
+  /*[2] https://www.w3schools.com/howto/howto_css_modals.asp - creating users */

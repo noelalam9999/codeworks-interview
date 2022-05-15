@@ -1,23 +1,132 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
-<body>
-<div class="container-main">
-<h2>Home</h2>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
 
-<div class="card">
+    <!-- Navbar -->
+    <div class="topnav">
+      <h2 style="text-align: center; float: left">Phonebook App</h2>
 
-  <div class="container">
-    <h4><b>John Doe</b></h4> 
-    <p>+808008000</p>
-    <p>10/4 baker street</p> 
-  </div>
-</div>
-</div>
+      <!-- Search Bar -->
+      <!-- [1] -->
+      <div class="search-container">
+        <span
+          class="green-button"
+          style="float: right; display: inline-block; position: abosolute"
+        >
+          <button id="add-button" type="submit">Add Record</button></span
+        >
+        <input id="input" type="text" placeholder="Search.." name="search" />
+      </div>
+    </div>
 
-</body>
-</html> 
+    <div class="container-main">
+      <!-- Cards -->
+      <div class="cards"></div>
+
+      <!-- Modals   -->
+      <!-- [2] -->
+      <!-- Add record Modal and form -->
+      <div id="addRecordModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <!-- [3] -->
+          <h3>Add Record</h3>
+          <div>
+            <form action="#" id="form">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="First Name"
+              />
+              <br /><br />
+
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                placeholder="Surname"
+              />
+              <br /><br />
+
+              <input
+                type="text"
+                id="phone-number"
+                name="phone-number"
+                placeholder="Phone-number"
+              />
+              <br /><br />
+
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Address"
+              />
+              <br /><br />
+              <br />
+              <span style="display: inline; float: center; padding-bottom: 10px"
+                ><button onClick="Submit()" id="add-user-confirm" type="submit">
+                  Submit
+                </button></span
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+<!-- Delete record prompt Modal -->
+      <div id="deleteRecordModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Are you sure you want to delete the record</p>
+          <span style="display: inline; float: center; padding-bottom: 10px"
+            ><button id="delete-yes-button"  type="submit">Yes</button></span
+          >
+          <span style="display: inline; float: center"
+            ><button id="delete-no-button"  type="submit">No</button></span
+          >
+        </div>
+      </div>
+<!-- Record Added Successfully Modal -->
+      <div id="addConfirmationModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Record Added to Directory!</p>
+          <span style="display: inline; float: center" class="close-button"
+            ><button onClick="closeModal()" id="ok" type="submit">Ok</button></span
+          >
+        </div>
+      </div>
+<!-- Record Deleted Successfully modal -->
+      <div id="deleteConfirmationModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Record Deleted Successfully</p>
+          <span style="display: inline; float: center" class="close-button"
+            ><button onClick="closeModal()" id="ok" type="submit">Ok</button></span
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+<!-- Citations -->
+<!-- [1] https://www.w3schools.com/howto/howto_css_searchbar.asp -->
+<!-- [2] https://www.w3schools.com/howto/howto_css_modals.asp - creating users -->
+<!-- [3] https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_text - record adding form -->
